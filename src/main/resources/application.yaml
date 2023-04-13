@@ -1,0 +1,33 @@
+server:
+  port: 8220
+  servlet:
+    context-path: /pizzeria
+
+spring:
+  main:
+    banner-mode: off
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      auto-commit: false
+      connection-timeout: 30000
+      driver-class-name: org.postgresql.Driver
+      allow-pool-suspension: true
+      idle-timeout: 30000
+      minimum-idle: 1
+      maximum-pool-size: 10
+      leak-detection-threshold: 30000
+      pool-name: '[JDBC]'
+    url: jdbc:postgresql://localhost:5434/pizzeria
+    username: postgres
+    password: postgres
+  jpa:
+    database: postgresql
+    open-in-view: false
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: validate
+    show-sql: false
+  liquibase:
+    change-log: classpath:liquibase/db.changelog-master.xml

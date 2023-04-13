@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "936c2482-e234-48c0-882f-2e4b9bda31fc",
+		"name": "Pizzeria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pizzeria submit toppings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"email1\",\r\n    \"toppings\": [\r\n        \"topping1\",\r\n        \"topping2\",\r\n        \"topping3\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8220/pizzeria/api/v1/toppings",
+					"host": [
+						"localhost"
+					],
+					"port": "8220",
+					"path": [
+						"pizzeria",
+						"api",
+						"v1",
+						"toppings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pizzeria submit toppings Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8220/pizzeria/api/v1/toppings/rating",
+					"host": [
+						"localhost"
+					],
+					"port": "8220",
+					"path": [
+						"pizzeria",
+						"api",
+						"v1",
+						"toppings",
+						"rating"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
